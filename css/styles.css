@@ -26,7 +26,7 @@
 
   --close-btn-border: rgba(0, 0, 0, 0.1);
   --border-cl: #ececec;
-
+  --modal-border-cl: rgba(33, 33, 33, 0.2);
   /*mesh properties*/
   --items: 3;
   --indent: 30px;
@@ -319,6 +319,89 @@ body {
 .soc-link:focus {
   background-color: var(--active-link-txt);
 }
+
+.footer-socials{
+  margin-right: auto;
+}
+
+
+
+.subscription-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+.subscribtion-field{
+  display: block;
+  margin-right: 12px;
+}
+
+.subscription-form-input{
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  background-color: inherit;
+  color: var(--additional-txt-cl);
+
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscription-form-input:focus{
+  border-color: var(--active-link-txt);
+  outline: none;
+}
+
+.subscribe-btn{
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30/16);
+  letter-spacing: 0.06em;
+
+
+  padding: 10px 28px;
+
+  color: var(--additional-txt-cl);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+  border-radius: 4px;
+  background-color: var(--active-link-txt);
+
+  cursor: pointer;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-icon{
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: var(--additional-txt-cl);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus{
+  background-color: var(--main-bt-act);
+}
+
+
+
+
 /**
   |============================
    Hero
@@ -826,6 +909,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 40px;
 
 
   background-color: var(--additional-bg-cl);
@@ -851,4 +935,182 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid var(--close-btn-border);
   cursor: pointer;
 
+  
+}
+
+.cross{
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cross:hover,
+.cross:focus{
+  fill: var(--active-link-txt);
+}
+
+.register-strong{
+  display: block;
+  font-size: 20px;
+  line-height: calc(23/20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  width: 100%;
+
+  margin-bottom: 12px;
+}
+.register-form-group{
+  margin-bottom: 20px;
+}
+
+.register-form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: calc(14/12);
+  letter-spacing: 0.01em;
+  color: var(--secondary-txt-cl);
+}
+
+.register-form-input{
+   width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 42px;
+  border: 1px solid var(--modal-border-cl);
+  outline: none;
+  border-radius: 4px;
+}
+
+.register-form-input:focus,
+.register-form-input:not(:placeholder-shown) {
+  border-color: var(--active-link-txt);
+  
+}
+
+.register-form-icon{
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  fill: var(--main-txt-cl);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form-input:focus ~ .register-form-icon,
+.register-form-input:not(:placeholder-shown) ~ .register-form-icon {
+  fill: var(--active-link-txt);
+}
+
+.register-form-comment{
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+  outline: transparent;
+
+  font-size: 12px;
+  line-height: calc(14/12);
+  letter-spacing: 0.01em;
+
+  border: 1px solid var(--modal-border-cl);
+  border-radius: 4px;
+}
+
+.register-form-comment:focus,
+.register-form-comment:not(:placeholder-shown){
+   border-color: var(--active-link-txt);
+  outline: none;
+}
+
+
+
+
+.register-form-desc{
+  display: block;
+  text-align: center;
+  user-select: none;
+
+  font-size: 14px;
+  line-height: calc(24/14);
+}
+
+.register-form-icons{
+  position: absolute;
+  left: 14px;
+}
+
+
+.icon-checked{
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-checked {
+  opacity: 1;}
+
+  .icon-unchecked{
+    transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-unchecked {
+  opacity: 0;}
+
+  
+.register-form-agreement{
+  font-size: 14px;
+  line-height: calc(24/14);
+  color: var(--secondary-txt-cl);
+
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+
+.register-form-link{
+  color: var(--active-link-txt);
+}
+
+.register-form-submit{
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+  text-align: center;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30/16);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  color: var(--additional-txt-cl);
+  background-color: var(--active-link-txt);
+  border-color: transparent;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.register-form-submit:hover,
+.register-form-submit:focus{
+  background-color: var(--main-bt-act);
 }
