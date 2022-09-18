@@ -237,6 +237,7 @@ body {
   display: block;
   margin-bottom: 20px;
   margin-right: 0;
+  padding: 0;
 }
 .link {
   display: block;
@@ -340,6 +341,7 @@ body {
 }
 
 .subscription-form-input{
+  display: block;
   width: 358px;
   height: 50px;
   padding: 15px 16px;
@@ -364,7 +366,8 @@ body {
   height: 50px;
   display: flex;
   align-items: center;
-  position: relative;
+  gap: 10px;
+ 
 
   font-weight: 700;
   font-size: 16px;
@@ -388,9 +391,6 @@ body {
 }
 
 .subscribe-icon{
-  position: absolute;
-  top: 13px;
-  right: 28px;
   fill: var(--additional-txt-cl);
 }
 
@@ -929,8 +929,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
   justify-content: center;
 
-  padding: 6px;
-
   border-radius: 50%;
   border: 1px solid var(--close-btn-border);
   cursor: pointer;
@@ -966,7 +964,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .register-form-field {
   position: relative;
   display: block;
-  margin-bottom: 10px;
 
   font-size: 12px;
   line-height: calc(14/12);
@@ -974,9 +971,15 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--secondary-txt-cl);
 }
 
+.register-form-field:not(:last-child){
+  margin-bottom: 10px;
+}
+
 .register-form-input{
+  display: block;
    width: 100%;
   height: 40px;
+  margin-top: 4px;
   padding-left: 42px;
   padding-right: 42px;
   border: 1px solid var(--modal-border-cl);
@@ -1007,6 +1010,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .register-form-comment{
+  display: block;
+  margin-top: 4px;
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -1060,6 +1065,13 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.register-form-checkbox:focus+ .register-form-icons{
+  outline: 2px solid var(--main-link-cl);
+  outline-offset: 1px;
+  border-radius: 1px;
+}
+
 
 .register-form-checkbox:checked + .register-form-icons .icon-unchecked {
   opacity: 0;}
